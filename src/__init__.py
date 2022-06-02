@@ -29,6 +29,11 @@ bl_info = {
         }
 
 import bpy
+# Import sample hello world package from _vendor folder.
+from ._vendor import hello_world
+# Import your own packages with below line.
+# This package must be in vendorize.toml and had the build script run.
+# from ._vendor import <Package name>
 
 #
 # Add additional functions here
@@ -39,6 +44,7 @@ def register():
     from . import ui
     properties.register()
     ui.register()
+    hello_world.hello()
 
 def unregister():
     from . import properties
