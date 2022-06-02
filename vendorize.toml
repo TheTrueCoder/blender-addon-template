@@ -1,4 +1,4 @@
-target = "build/_vendor"
+target = "src/_vendor"
 packages = [
     "hello-world-20200509 == 0.0.2",
 ]
