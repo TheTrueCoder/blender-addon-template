@@ -2,10 +2,14 @@ import vendorize.cli as vendorize
 from shutil import make_archive, copytree, rmtree
 from os.path import join
 
+# Name of addon. Determines the name of the zip package.
 ADDON_NAME: str = "cue-blender"
+# Name of folder that the plugin source code lives in.
 CODE_DIR: str = "src"
+# Name of folder to put python packages.
 DEP_FOLDER_NAME: str = "_vendor"
 
+# Path where vendorised package is generated.
 DEP_PATH = join(CODE_DIR, DEP_FOLDER_NAME)
 
 # MAKE VENDORISED PACKAGE BUNDLE
